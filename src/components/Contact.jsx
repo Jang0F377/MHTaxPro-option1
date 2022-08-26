@@ -24,7 +24,7 @@ function Contact() {
     alert('Thank you for your message')
   }
   return (
-    <div className="font-inter" id="pricing">
+    <div className="font-inter" id="contact">
       <div className="mx-auto max-w-7xl py-16 px-4 sm:py-24 sm:px-6 lg:px-8 ">
         <div className="relative rounded-tr rounded-br bg-blue-200 shadow-xl">
           <h2 className="sr-only">Contact me</h2>

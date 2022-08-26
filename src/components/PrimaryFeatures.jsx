@@ -53,7 +53,7 @@ export function PrimaryFeatures() {
 
   return (
     <section
-      id="features"
+      id="current"
       aria-label="Info for your taxes"
       className="relative overflow-hidden bg-blue-600 pt-20 pb-28 sm:py-32"
     >
