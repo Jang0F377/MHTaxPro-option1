@@ -2,7 +2,7 @@ import Image from 'next/future/image'
 
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
-import backgroundImage from '@/images/background-call-to-action.jpg'
+import backgroundImage from '@/images/background-auth.jpg'
 
 export function CallToAction() {
   return (
@@ -30,9 +30,9 @@ export function CallToAction() {
             <div className="inline-flex rounded-md shadow">
               <a
                 href="#"
-                className="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-800 px-2.5
-                                        py-1.5 text-base font-semibold text-white hover:bg-transparent hover:text-blue-900 hover:ring-1
-                                        hover:ring-2 hover:ring-indigo-800 md:px-5 md:py-3 "
+                className="inline-flex items-center justify-center rounded-md border border-transparent bg-blue-700 px-2.5
+                                        py-1.5 text-base font-semibold text-blue-50 hover:bg-blue-900
+                                        hover:ring-1 hover:ring-blue-200 md:px-5 md:py-3 "
               >
                 Check Refund Status
               </a>
@@ -40,9 +40,9 @@ export function CallToAction() {
             <div className="ml-3 inline-flex">
               <a
                 href="#"
-                className="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-800 px-2.5
-                                        py-1.5 text-base font-semibold text-white hover:bg-transparent hover:text-blue-900 hover:ring-1
-                                        hover:ring-2 hover:ring-indigo-800 md:px-5 md:py-3"
+                className="inline-flex items-center justify-center rounded-md border border-transparent bg-blue-700 px-2.5
+                                        py-1.5 text-base font-semibold text-blue-50 hover:bg-blue-900
+                                        hover:ring-1 hover:ring-blue-200 md:px-5 md:py-3"
               >
                 Check Amended Status
               </a>

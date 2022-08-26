@@ -8,14 +8,17 @@ import { Container } from '@/components/Container'
 import { CallToAction } from '@/components/CallToAction'
 import NewsCards from '@/components/NewsCards'
 import DatesToRemember from '@/components/DatesToRemember'
+import screenshotExpenses from '@/images/screenshots/expenses.png'
+import profitLoss from '@/images/screenshots/profit-loss.png'
+import moneyPic from '@/images/screenshots/pexels-karolina-grabowska-4386372.jpg'
 
 const features = [
   {
-    name: "Where's my refund",
-    summary: 'Check on the status of your refund or amended return.',
+    name: "Deductions & Credits",
+    summary: "The tax landscape is always changing, what's deductible, what's not?",
     description:
-      'Please note the IRS continues to experience delays in processing. 3-4 weeks for refunds. Approx. 6-8 months for Amended.',
-    component: <CallToAction />,
+        "I'll make sure you get the deductions & credits you deserve. Electric Vehicle, Tuition, Energy Efficient, etc",
+    image: screenshotExpenses,
     icon: function ReportingIcon() {
       let id = useId()
       return (
@@ -45,11 +48,13 @@ const features = [
     },
   },
   {
-    name: 'News',
-    summary: 'Get the latest news straight from the IRS website.',
+    name: 'Businesses',
+    summary: 'Sole Proprietorship/Partnerships/S-Corps',
     description:
-      'The IRS continues to post relevant tax season info, refer here for the latest developments.',
-    component: <NewsCards />,
+      'I can prepare taxes for your business of any size. ' +
+        'I can help you set up your new entity and apply for S-corp status (if-applicable)',
+    image: profitLoss,
+
     icon: function InventoryIcon() {
       return (
         <>
@@ -72,12 +77,13 @@ const features = [
     },
   },
   {
-    name: 'Due Dates',
+    name: 'Best of Both Worlds',
     summary:
       'To avoid penalties and interest make sure you know your filing date!',
     description:
-      'Remember! An extension to file is not an extension to pay. If you think you will owe money but are not ready to file, we can work together to calculate what you should pay to avoid a late payment penalty plus interest.',
-    component: <DatesToRemember />,
+        'Get the knowledge and expertise you need, the refund you deserve, and good conversation at an affordable price',
+    image: moneyPic,
+
     icon: function ContactsIcon() {
       return (
         <>
@@ -188,8 +194,12 @@ function FeaturesDesktop() {
                   aria-hidden={featureIndex !== selectedIndex}
                 >
                   <div className="w-[52.75rem] overflow-hidden rounded-xl bg-white shadow-lg shadow-slate-900/5 ring-1 ring-slate-500/10">
-                    {feature.component}
-                  </div>
+                    <Image
+                        className="w-full"
+                        src={feature.image}
+                        alt=""
+                        sizes="52.75rem"
+                    />                  </div>
                 </Tab.Panel>
               ))}
             </div>
@@ -208,6 +218,11 @@ export function SecondaryFeatures() {
       aria-label="Features for simplifying everyday business tasks"
       className="pt-20 pb-14 sm:pb-20 sm:pt-32 lg:pb-32"
     >
+      <div className="mx-auto max-w-2xl md:text-center">
+      <h2 className="font-display text-3xl tracking-tight text-blue-900  sm:text-4xl md:text-5xl">
+        Everything to make you feel good about your taxes
+      </h2>
+      </div>
       <Container>
         <FeaturesMobile />
         <FeaturesDesktop />

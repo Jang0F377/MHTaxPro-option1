@@ -4,38 +4,36 @@ import { Tab } from '@headlessui/react'
 import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
+import { CallToAction } from '@/components/CallToAction'
+import NewsCards from '@/components/NewsCards'
+import DatesToRemember from '@/components/DatesToRemember'
 import backgroundImage from '@/images/background-features.jpg'
 import screenshotExpenses from '@/images/screenshots/expenses.png'
 import profitLoss from '@/images/screenshots/profit-loss.png'
-import screenshotReporting from '@/images/screenshots/reporting.png'
-import moneyPic from '@/images/screenshots/blogging-guide-xYaMK5p3vCA-unsplash.jpg'
+import moneyPic from '@/images/screenshots/pexels-karolina-grabowska-4386372.jpg'
 
 const features = [
   {
-    title: 'Deductions/Credits',
+    title: "Where's my refund",
     description:
-      "I'll make sure you get the deductions & credits you deserve. Electric Vehicle, Tuition, Energy Efficient, etc",
-    image: screenshotExpenses,
+        'Please note the IRS continues to experience delays in processing. 3-4 weeks for refunds. Approx. 6-8 months for Amended.',
+
+    component: <CallToAction/>,
   },
   {
-    title: 'Sole Proprietorship/Partnerships/S-Corps',
+    title: 'Latest news from the IRS website',
     description:
-      "Keep track of everyone's salaries and whether or not they've been paid. Direct deposit not supported.",
-    image: profitLoss,
+        'The IRS continues to post relevant tax season info, refer here for the latest developments.',
+    component: <NewsCards />,
   },
 
   {
-    title: 'Best of Both Worlds',
+    title: 'Due Dates',
     description:
-      'Get the knowledge and expertise you need, the refund you deserve, and good conversation at an affordable price',
-    image: moneyPic,
+        'To avoid penalties and interest make sure you know your filing date!',
+    component: <DatesToRemember />,
+
   },
-  // {
-  //   title: 'Reporting',
-  //   description:
-  //     'Easily export your data into an Excel spreadsheet where you can do whatever the hell you want with it.',
-  //   image: screenshotReporting,
-  // },
 ]
 
 export function PrimaryFeatures() {
@@ -59,7 +57,7 @@ export function PrimaryFeatures() {
   return (
     <section
       id="features"
-      aria-label="Features for running your books"
+      aria-label="Info for your taxes"
       className="relative overflow-hidden bg-blue-600 pt-20 pb-28 sm:py-32"
     >
       <Image
@@ -72,16 +70,14 @@ export function PrimaryFeatures() {
       />
       <Container className="relative">
         <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
-          <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">
-            Everything to make you feel good about your taxes
-          </h2>
+
           {/*<p className="mt-6 text-lg tracking-tight text-blue-100">*/}
           {/*  */}
           {/*</p>*/}
         </div>
         <Tab.Group
           as="div"
-          className="mt-16 grid grid-cols-1 items-center gap-y-2 pt-10 sm:gap-y-6 md:mt-20 lg:grid-cols-12 lg:pt-0"
+          className="mt-16 grid grid-cols-1 items-center gap-y-2 pt-10 sm:gap-y-6 md:mt-20 xl:grid-cols-12 lg:pt-0"
           vertical={tabOrientation === 'vertical'}
         >
           {({ selectedIndex }) => (
@@ -134,14 +130,15 @@ export function PrimaryFeatures() {
                         {feature.description}
                       </p>
                     </div>
-                    <div className="mt-10 w-[45rem] overflow-hidden rounded-xl bg-slate-50 shadow-xl shadow-blue-900/20 sm:w-auto lg:mt-0 lg:w-[67.8125rem]">
-                      <Image
-                        className="w-full"
-                        src={feature.image}
-                        alt=""
-                        priority
-                        sizes="(min-width: 1024px) 67.8125rem, (min-width: 640px) 100vw, 45rem"
-                      />
+                    <div className="mt-10  overflow-x-auto xl:overflow-hidden xl:w-[45rem] rounded-xl bg-slate-50 shadow-xl shadow-blue-900/20 sm:w-auto lg:mt-0 2xl:w-full">
+                      {feature.component}
+                      {/*<Image*/}
+                      {/*  className="w-full"*/}
+                      {/*  src={feature.image}*/}
+                      {/*  alt=""*/}
+                      {/*  priority*/}
+                      {/*  sizes="(min-width: 1024px) 67.8125rem, (min-width: 640px) 100vw, 45rem"*/}
+                      {/*/>*/}
                     </div>
                   </Tab.Panel>
                 ))}
