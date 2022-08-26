@@ -8,9 +8,6 @@ import { CallToAction } from '@/components/CallToAction'
 import NewsCards from '@/components/NewsCards'
 import DatesToRemember from '@/components/DatesToRemember'
 import backgroundImage from '@/images/background-features.jpg'
-import screenshotExpenses from '@/images/screenshots/expenses.png'
-import profitLoss from '@/images/screenshots/profit-loss.png'
-import moneyPic from '@/images/screenshots/pexels-karolina-grabowska-4386372.jpg'
 
 const features = [
   {

@@ -5,9 +5,6 @@ import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
 
-import { CallToAction } from '@/components/CallToAction'
-import NewsCards from '@/components/NewsCards'
-import DatesToRemember from '@/components/DatesToRemember'
 import screenshotExpenses from '@/images/screenshots/expenses.png'
 import profitLoss from '@/images/screenshots/profit-loss.png'
 import moneyPic from '@/images/screenshots/pexels-karolina-grabowska-4386372.jpg'
@@ -79,7 +76,7 @@ const features = [
   {
     name: 'Best of Both Worlds',
     summary:
-      'To avoid penalties and interest make sure you know your filing date!',
+      "Taxes don't need to be intimidating!",
     description:
         'Get the knowledge and expertise you need, the refund you deserve, and good conversation at an affordable price',
     image: moneyPic,
@@ -219,7 +216,7 @@ export function SecondaryFeatures() {
       className="pt-20 pb-14 sm:pb-20 sm:pt-32 lg:pb-32"
     >
       <div className="mx-auto max-w-2xl md:text-center">
-      <h2 className="font-display text-3xl tracking-tight text-blue-900  sm:text-4xl md:text-5xl">
+      <h2 className="font-display text-3xl tracking-tight ml-1 pl-0.5 md:ml-0 md:pl-0 text-blue-900  sm:text-4xl md:text-5xl">
         Everything to make you feel good about your taxes
       </h2>
       </div>
