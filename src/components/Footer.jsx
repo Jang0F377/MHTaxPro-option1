@@ -1,5 +1,6 @@
 import { Container } from '@/components/Container'
 import { NavLink } from '@/components/NavLink'
+import {NavLinks} from "@/components/NavLinks";
 
 export function Footer() {
   return (
@@ -13,9 +14,7 @@ export function Footer() {
           />
           <nav className="mt-10 text-sm" aria-label="quick links">
             <div className="-my-1 flex justify-center gap-x-6 text-center">
-              <NavLink href="#current">Stay Current</NavLink>
-              <NavLink href="#about">About</NavLink>
-              <NavLink href="#contact">Contact</NavLink>
+              <NavLinks/>
             </div>
           </nav>
         </div>

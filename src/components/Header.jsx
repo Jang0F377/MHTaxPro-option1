@@ -6,6 +6,7 @@ import clsx from 'clsx'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { NavLink } from '@/components/NavLink'
+import {NavLinks} from "@/components/NavLinks";
 
 function MobileNavLink({ href, children }) {
   return (
@@ -103,10 +104,8 @@ export function Header() {
                 className=" w-20  rounded-full object-cover p-2 "
               />
             </Link>
-            <div className="hidden md:flex md:gap-x-6 ">
-              <NavLink href="#current">Stay Current</NavLink>
-              <NavLink href="#about">About</NavLink>
-              <NavLink href="#contact">Contact</NavLink>
+            <div className="hidden md:flex md:gap-x-7 ">
+              <NavLinks/>
             </div>
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
