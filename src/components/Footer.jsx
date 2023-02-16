@@ -1,11 +1,10 @@
 import { Container } from '@/components/Container'
-import { NavLink } from '@/components/NavLink'
 import {NavLinks} from "@/components/NavLinks";
 
 export function Footer() {
   return (
-    <footer className="bg-blue-800">
-      <Container>
+    <footer className="bg-blue-800 ">
+      <Container className="">
         <div className="rounded-xl  py-16">
           <img
             src={'/mh-logo.webp'}

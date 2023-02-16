@@ -5,8 +5,8 @@ import clsx from 'clsx'
 
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
-import { NavLink } from '@/components/NavLink'
 import {NavLinks} from "@/components/NavLinks";
+import {SCHEDULE_NOW_URL} from "@/constants/endpoints";
 
 function MobileNavLink({ href, children }) {
   return (
@@ -109,7 +109,7 @@ export function Header() {
             </div>
           </div>
           <div className="flex items-center gap-x-5 md:gap-x-8">
-            <Button href="#" color="blue">
+            <Button href={SCHEDULE_NOW_URL} color="blue">
               <span>
                 Schedule <span className="hidden lg:inline">today</span>
               </span>
